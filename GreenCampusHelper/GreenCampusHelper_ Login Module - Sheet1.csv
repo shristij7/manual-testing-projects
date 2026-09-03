@@ -1,0 +1,81 @@
+,Test Case Template for Project,,,,,,,,,,
+,Project Name,Green Campus Helper,,,,,,,,,
+,Module Name,Login,,,,,,,,,
+,Created By ,Shristi,,,,,,,,,
+,Created Date,02/09/2026,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+Scenario ID, Scenario Description,Test Case ID,Test case data,Test case description,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Priority,Comments
+S1,Logging in with valid credentials,T01,"Email: ram@gmail.com
+Password: Ram@123",Verify that the login works with valid email and valid password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter a valid email.
+ 3. Enter a password.","The system must accept the credentials and log the user in
+and reply with a welcome message and display your role.","The system accepts the credentials and replies with: 
+"" Welcome back, Ram! (Admin)
+  Role: Administrator """,Passed,P0,N/A
+S2,Logging in with invalid credentials,T02,"Email: ram@gmail.con
+Password: Ram@123",Verify that the login does not work with an invalid email and a valid password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an invalid email.
+ 3. Enter a password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,N/A
+,,T03,"Email: ram@gmail.com 
+Password: Ram@1234",Verify that the login does not work with a valid email and an invalid password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter a valid email.
+ 3. Enter an invalid password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,N/A
+,,T04,"Email: ram@gmail.con
+Password: Ram@1234",Verify that the login does not work with an invalid email and an invalid password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an invalid email.
+ 3. Enter an invalid password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,N/A
+S3,Logging in with blank credentials,T05,"Email: 
+Password: Ram@123",Verify that the login does not work with a blank email and an invalid password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an invalid email.
+ 3. Enter an invalid password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for blank credentials.
+Eg: ""Blank email entered."" "
+,,T06,"Email: ram@gmail.com
+Password: ",Verify that the login does not work with a valid email and a blank password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an invalid email.
+ 3. Enter an invalid password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for blank credentials.
+Eg: ""Blank password entered."" "
+,,T07,"Email:
+Password: ",Verify that the login does not work with a blank email and a blank password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an invalid email.
+ 3. Enter an invalid password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for blank credentials.
+Eg: ""Blank email and password entered."" "
+S4,Logging in with an unregistered email and password,T08,"Email:abc@gmail.com
+Password: Ram@123",Verify that the login fails with an unregistered email and a password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an unregistered email.
+ 3. Enter a password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for unregistered credentials.
+Eg: ""Unregistered email."""
+,,T09,"Email:ram@gmail.com
+Password: abcd",Verify that the login fails with an email and an unregistered password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an email.
+ 3. Enter an unregistered password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for unregistered credentials.
+Eg: ""Invalid password."""
+,,T10,"Email:abc@gmail.com
+Password: abcd",Verify that the login fails with an unregistered email and an unregistered password.,Green Campus Helper must be loaded into the console,"1. Navigate to Green Campus Helper.
+ 2. Enter an unregistered email.
+ 3. Enter an unregistered password.","The system must not accept the credentials and reply with an 
+error message. ","The system does not accept the credentials and replies with: 
+""Invalid email or password. Please try again.""",Passed,P1,"The system can specify a separate error 
+for unregistered credentials.
+Eg: ""Unregistered email and password."""
